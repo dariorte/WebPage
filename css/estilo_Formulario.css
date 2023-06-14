@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img{
+    float: left;
+    padding: 0px 5px 0px 0px ;
+    width: 500px;
+    height: 400px;
+    border-radius: 20px;
+}
+
+#poster{
+    height: 400px;
+    width: 500px;
+    box-shadow: .1s, transparent;
+    background-size: cover;
+}
+#poster:hover{
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
+
+body {
+    font-family: 'Metal Mania', cursive;
+    background: #a9ab2f;
+    background: -webkit-linear-gradient(to right, #fbff01e5, #d1e70d);
+    background: linear-gradient(to right, #eeff00b9, #0d22e4);
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1{
+    text-align: center;
+    font-weight: 700;
+}
+
+form{
+    background: #fff;
+    padding: 40px 0;
+    box-shadow:  0 0 6px white;
+    border-radius: 10px;
+}
+
+.form{
+    width: 100%;
+    margin: auto;
+}
+
+.form .grupo{
+    position: relative;
+    margin: 45px;
+    background: rgb(50, 160, 211);
+}
+
+input{
+    background: none;
+    color: #c6c6cc;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+
+}
+
+input:focus{
+    outline: none;
+    color:#727124;
+
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+
+}
+
+input:focus~label,
+input:valid~label{
+   top: -18px; 
+   font-size: 12px;
+   color: #0d3104;
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #d6b319, #0d2de4);
+    transition: 0.3s ease width;
+    left: 0;
+
+}
+
+input:focus~.barra::before{
+  width: 100%;
+    
+}
+
+button{
+    font-family: 'Metal Mania', cursive;
+    background: #2f42ab;
+    background: -webkit-linear-gradient(to right, #dee063, #243072);
+    background: linear-gradient(to right, #5c84f0, #0d46e4);
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:500px){
+    .form{
+        width: 80%;
+    }
+    
+}
